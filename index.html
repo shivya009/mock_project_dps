@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Quiz Application</title>
+</head>
+<body>
+    <div id="quizContainer">
+        <h1>Quiz Application</h1>
+        <form id="quizForm">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <br>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="9">Science</option>
+                <option value="17">Geography</option>
+                <!-- Add more options here -->
+            </select><br>
+
+            <label for="numQuestions">Number of Questions:</label>
+            <input type="number" id="numQuestions" name="numQuestions" min="5" max="10" required><br>
+
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select><br>
+
+            <button  type="button" id="startQuiz" >Start Quiz</button>
+        </form>
+        <div id="question-container" style="display: none;">
+            <div id="question">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div id="options">
+                
+                <input type="radio" name="answer" id="optionA" value="optionA" checked=false>
+                <label for="optionA"></label>
+                <br>
+                
+                <input type="radio" name="answer" id="optionB" value="optionB" checked=false>
+                <label for="optionB"></label>
+                <br>
+                <input type="radio" name="answer" id="optionC" value="optionC" checked=false>
+                <label for="optionC"></label>
+                <br>
+                <input type="radio" name="answer" id="optionD" value="optionD" checked=false>
+                <label for="optionD"></label>
+            </div>
+            <button id="submitButton">Submit</button>
+            <button id="nextButton" style="display: none;">Next</button>
+            <p id="timer">Time left: 20</p>
+        <p id="score">Score: 0</p>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
